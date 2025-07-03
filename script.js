@@ -402,3 +402,21 @@ if ("ontouchstart" in window) {
     })
   })
 }
+
+// Show thank you message if redirected after form submission
+window.addEventListener('DOMContentLoaded', function() {
+  const url = new URL(window.location.href);
+  if (url.hash.includes('contact') && url.search.includes('success=1')) {
+    const thankYou = document.getElementById('thankYouMessage');
+    if (thankYou) {
+      thankYou.style.display = 'block';
+      // Optionally, scroll to the contact section
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    // Remove the query string so the message doesn't show again on refresh
+    history.replaceState(null, '', url.origin + url.pathname + '#contact');
+  }
+});
