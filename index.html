@@ -508,33 +508,35 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="contact-form-wrapper"  data-aos-delay="200">
-                        <form class="contact-form" id="contactForm">
+                        <form action="https://formsubmit.co/hendabdelnasser073@gmail.com" method="POST">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject" required>
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                        <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" name="_next" value="/">
+                            <input type="text" name="_honey" style="display:none">
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
                             </div>
