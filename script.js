@@ -46,40 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   })
 })
 
-// Contact form handling
-const contactForm = document.getElementById("contactForm")
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault()
-
-    // Get form data
-    const formData = new FormData(this)
-    const name = this.querySelector('input[type="text"]').value
-    const email = this.querySelector('input[type="email"]').value
-    const subject = this.querySelectorAll('input[type="text"]')[1].value
-    const message = this.querySelector("textarea").value
-
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-      showNotification("Please fill in all fields", "error")
-      return
-    }
-
-    // Simulate form submission
-    const submitBtn = this.querySelector('button[type="submit"]')
-    const originalText = submitBtn.textContent
-    submitBtn.textContent = "Sending..."
-    submitBtn.disabled = true
-
-    setTimeout(() => {
-      showNotification("Message sent successfully! I'll get back to you soon.", "success")
-      this.reset()
-      submitBtn.textContent = originalText
-      submitBtn.disabled = false
-    }, 2000)
-  })
-}
-
 // Notification system
 function showNotification(message, type = "info") {
   const notification = document.createElement("div")
