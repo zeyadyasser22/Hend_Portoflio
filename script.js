@@ -1,3 +1,27 @@
+// Loading Screen Management
+window.addEventListener('load', () => {
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Hide loading screen after page loads
+  setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+    // Remove from DOM after animation completes
+    setTimeout(() => {
+      loadingScreen.remove();
+    }, 500);
+  }, 2000);
+});
+
+// Initialize AOS animations
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+});
+
 // Navbar scroll effect
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar")
@@ -291,47 +315,6 @@ if (footerText) {
 
 console.log("Portfolio loaded successfully! 🎉")
 
-// Initialize AOS (Animate On Scroll) - simplified version
-document.addEventListener("DOMContentLoaded", () => {
-  // Simple fade-in animation for elements
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1"
-        entry.target.style.transform = "translateY(0)"
-      }
-    })
-  }, observerOptions)
-
-  // Add animation to elements
-  const animatedElements = document.querySelectorAll(
-    ".hero-content, .hero-image, .project-card, .skill-category, .timeline-item",
-  )
-  animatedElements.forEach((el) => {
-    el.style.opacity = "0"
-    el.style.transform = "translateY(30px)"
-    el.style.transition = "all 0.6s ease"
-    observer.observe(el)
-  })
-
-  // Show hero content immediately
-  const heroContent = document.querySelector(".hero-content")
-  const heroImage = document.querySelector(".hero-image")
-  if (heroContent) {
-    heroContent.style.opacity = "1"
-    heroContent.style.transform = "translateY(0)"
-  }
-  if (heroImage) {
-    heroImage.style.opacity = "1"
-    heroImage.style.transform = "translateY(0)"
-  }
-})
-
 // Enhanced mobile responsiveness
 function handleMobileLayout() {
   const isMobile = window.innerWidth <= 768
@@ -419,4 +402,76 @@ window.addEventListener('DOMContentLoaded', function() {
     // Remove the query string so the message doesn't show again on refresh
     history.replaceState(null, '', url.origin + url.pathname + '#contact');
   }
+});
+
+// Animate skill bars when in viewport
+function animateSkillBars() {
+  const bars = document.querySelectorAll('.skill-bar');
+  bars.forEach(bar => {
+    const fill = bar.querySelector('.skill-bar-fill');
+    const skill = bar.getAttribute('data-skill');
+    const rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 40) {
+      fill.style.width = skill + '%';
+    }
+  });
+}
+window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('DOMContentLoaded', animateSkillBars);
+
+// Certificate Modal Logic
+function openCertificateModal(id) {
+  document.getElementById(id).style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeCertificateModal(id) {
+  document.getElementById(id).style.display = 'none';
+  document.body.style.overflow = '';
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.certificate-modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+};
+
+// Copy to Clipboard for Contact Info
+function copyToClipboard(event, text) {
+  event.preventDefault();
+  event.stopPropagation();
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text);
+  } else {
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+  }
+  // Show feedback
+  const icon = event.target;
+  const original = icon.className;
+  icon.className = 'fas fa-check copy-icon';
+  setTimeout(() => { icon.className = original; }, 1200);
+}
+
+// Ripple Effect for Contact Links
+function addRippleEffect(e) {
+  const target = e.currentTarget;
+  const circle = document.createElement('span');
+  circle.className = 'ripple';
+  const diameter = Math.max(target.clientWidth, target.clientHeight);
+  circle.style.width = circle.style.height = diameter + 'px';
+  circle.style.left = e.offsetX - diameter / 2 + 'px';
+  circle.style.top = e.offsetY - diameter / 2 + 'px';
+  target.appendChild(circle);
+  setTimeout(() => circle.remove(), 500);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.ripple-effect').forEach(el => {
+    el.addEventListener('click', addRippleEffect);
+  });
 });
