@@ -17,6 +17,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-text">H</span>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <div class="loading-text">
+                <span class="loading-title">Hend Abd-El-Nasser</span>
+                <span class="loading-subtitle">Data Analyst Portfolio</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
@@ -68,7 +86,9 @@
           </p>
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-outline-primary">Get In Touch</a>
+            <a href="assets/Hend_CV.pdf" class="btn btn-cv" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
           </div>
           <div class="social-links">
             <a href="https://linkedin.com/in/hend-abd-elnasser" target="_blank" aria-label="LinkedIn">
@@ -266,16 +286,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title" >Featured Projects</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-description"  data-aos-delay="100">
+                    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                    <p class="section-description" data-aos="fade-up" data-aos-delay="200">
                         Here are some of my recent data analysis and development projects
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4"  data-aos-delay="100">
-                    <div class="project-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card enhanced">
+                        <div class="project-shape"></div>
                         <div class="project-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
@@ -290,8 +311,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4"  data-aos-delay="200">
-                    <div class="project-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card enhanced">
+                        <div class="project-shape"></div>
                         <div class="project-icon">
                             <i class="fas fa-subway"></i>
                         </div>
@@ -306,8 +328,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4"  data-aos-delay="300">
-                    <div class="project-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card enhanced">
+                        <div class="project-shape"></div>
                         <div class="project-icon">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -322,8 +345,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4"  data-aos-delay="400">
-                    <div class="project-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card enhanced">
+                        <div class="project-shape"></div>
                         <div class="project-icon">
                             <i class="fas fa-plane"></i>
                         </div>
@@ -339,8 +363,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4"  data-aos-delay="500">
-                    <div class="project-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card enhanced">
+                        <div class="project-shape"></div>
                         <div class="project-icon">
                             <i class="fas fa-bicycle"></i>
                         </div>
@@ -355,8 +380,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4"  data-aos-delay="600">
-                    <div class="project-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card enhanced">
+                        <div class="project-shape"></div>
                         <div class="project-icon">
                             <i class="fas fa-dumbbell"></i>
                         </div>
@@ -380,109 +406,171 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title" >Skills & Technologies</h2>
-                    <div class="section-divider"></div>
+                    <h2 class="section-title" data-aos="fade-up">Skills & Technologies</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4" >
-                    <div class="skill-category">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category enhanced">
+                        <div class="skill-shape"></div>
                         <div class="skill-icon">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4>Programming Languages</h4>
                         <div class="skill-list">
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">SQL</span>
-                            <span class="skill-item">R</span>
-                            <span class="skill-item">C++</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">HTML & CSS</span>
+                            <div class="skill-bar-wrapper" title="Expert in Python scripting and automation">
+                                <span class="skill-item badge rounded-pill bg-primary">Python</span>
+                                <div class="skill-bar" data-skill="95"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Advanced SQL for data analysis">
+                                <span class="skill-item badge rounded-pill bg-success">SQL</span>
+                                <div class="skill-bar" data-skill="90"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Statistical computing with R">
+                                <span class="skill-item badge rounded-pill bg-info">R</span>
+                                <div class="skill-bar" data-skill="70"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Competitive programming with C++">
+                                <span class="skill-item badge rounded-pill bg-secondary">C++</span>
+                                <div class="skill-bar" data-skill="80"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Web scripting with JavaScript">
+                                <span class="skill-item badge rounded-pill bg-warning text-dark">JavaScript</span>
+                                <div class="skill-bar" data-skill="85"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Web design with HTML & CSS">
+                                <span class="skill-item badge rounded-pill bg-dark">HTML & CSS</span>
+                                <div class="skill-bar" data-skill="92"><div class="skill-bar-fill"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 mb-4" >
-                    <div class="skill-category">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category enhanced">
+                        <div class="skill-shape"></div>
                         <div class="skill-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <h4>Data Analysis</h4>
                         <div class="skill-list">
-                            <span class="skill-item">Excel</span>
-                            <span class="skill-item">Power BI</span>
-                            <span class="skill-item">Tableau</span>
-                            <span class="skill-item">Pandas</span>
-                            <span class="skill-item">NumPy</span>
-                            <span class="skill-item">Matplotlib</span>
+                            <div class="skill-bar-wrapper" title="Advanced Excel analytics">
+                                <span class="skill-item badge rounded-pill bg-warning text-dark">Excel</span>
+                                <div class="skill-bar" data-skill="90"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Interactive dashboards in Power BI">
+                                <span class="skill-item badge rounded-pill bg-primary">Power BI</span>
+                                <div class="skill-bar" data-skill="88"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Data visualization with Tableau">
+                                <span class="skill-item badge rounded-pill bg-info">Tableau</span>
+                                <div class="skill-bar" data-skill="70"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Data wrangling with Pandas">
+                                <span class="skill-item badge rounded-pill bg-success">Pandas</span>
+                                <div class="skill-bar" data-skill="85"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Numerical computing with NumPy">
+                                <span class="skill-item badge rounded-pill bg-secondary">NumPy</span>
+                                <div class="skill-bar" data-skill="80"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Plotting with Matplotlib">
+                                <span class="skill-item badge rounded-pill bg-danger">Matplotlib</span>
+                                <div class="skill-bar" data-skill="75"><div class="skill-bar-fill"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 mb-4" >
-                    <div class="skill-category">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category enhanced">
+                        <div class="skill-shape"></div>
                         <div class="skill-icon">
                             <i class="fas fa-database"></i>
                         </div>
                         <h4>Database Management</h4>
                         <div class="skill-list">
-                            <span class="skill-item">MySQL</span>
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">MongoDB</span>
-                            <span class="skill-item">SQL Server</span>
+                            <div class="skill-bar-wrapper" title="MySQL database design">
+                                <span class="skill-item badge rounded-pill bg-primary">MySQL</span>
+                                <div class="skill-bar" data-skill="85"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="PostgreSQL for analytics">
+                                <span class="skill-item badge rounded-pill bg-info">PostgreSQL</span>
+                                <div class="skill-bar" data-skill="75"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="NoSQL with MongoDB">
+                                <span class="skill-item badge rounded-pill bg-success">MongoDB</span>
+                                <div class="skill-bar" data-skill="70"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Enterprise SQL Server">
+                                <span class="skill-item badge rounded-pill bg-secondary">SQL Server</span>
+                                <div class="skill-bar" data-skill="80"><div class="skill-bar-fill"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 mb-4" >
-                    <div class="skill-category">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category enhanced">
+                        <div class="skill-shape"></div>
                         <div class="skill-icon">
                             <i class="fas fa-tools"></i>
                         </div>
                         <h4>Tools & Technologies</h4>
                         <div class="skill-list">
-                            <span class="skill-item">Git & GitHub</span>
-                            <span class="skill-item">Jupyter Notebook</span>
-                            <span class="skill-item">Google Colab</span>
-                            <span class="skill-item">APIs</span>
+                            <div class="skill-bar-wrapper" title="Version control with Git & GitHub">
+                                <span class="skill-item badge rounded-pill bg-dark">Git & GitHub</span>
+                                <div class="skill-bar" data-skill="90"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Jupyter Notebook for data science">
+                                <span class="skill-item badge rounded-pill bg-warning text-dark">Jupyter Notebook</span>
+                                <div class="skill-bar" data-skill="85"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="Google Colab for cloud notebooks">
+                                <span class="skill-item badge rounded-pill bg-info">Google Colab</span>
+                                <div class="skill-bar" data-skill="80"><div class="skill-bar-fill"></div></div>
+                            </div>
+                            <div class="skill-bar-wrapper" title="API integration experience">
+                                <span class="skill-item badge rounded-pill bg-success">APIs</span>
+                                <div class="skill-bar" data-skill="75"><div class="skill-bar-fill"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Certificates -->
             <div class="row mt-5">
                 <div class="col-lg-12 text-center mb-4">
-                    <h3 class="subsection-title" >Certificates</h3>
+                    <h3 class="subsection-title" data-aos="fade-up">Certificates</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" >
-                    <div class="certificate-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-card enhanced top-certificate certificate-3d" onclick="openCertificateModal('modal1')">
+                        <div class="certificate-shape"></div>
                         <div class="certificate-icon">
-                            <i class="fab fa-linkedin"></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" class="issuer-logo">
                         </div>
+                        <div class="certificate-ribbon"><i class="fas fa-star"></i> Top Certificate</div>
                         <h5>Learning Data Analytics Foundations</h5>
                         <p>LinkedIn Learning</p>
                         <span class="certificate-date">March 2025</span>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" >
-                    <div class="certificate-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-card enhanced certificate-3d" onclick="openCertificateModal('modal2')">
+                        <div class="certificate-shape"></div>
                         <div class="certificate-icon">
-                            <i class="fab fa-google"></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google Logo" class="issuer-logo">
                         </div>
                         <h5>Google Analytics Certification</h5>
                         <p>Google Skillshop</p>
                         <span class="certificate-date">October 2024</span>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 mb-4" >
-                    <div class="certificate-card">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-card enhanced certificate-3d" onclick="openCertificateModal('modal3')">
+                        <div class="certificate-shape"></div>
                         <div class="certificate-icon">
-                            <i class="fas fa-chart-line"></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="NTI Logo" class="issuer-logo">
                         </div>
                         <h5>Data Analysis – Skills for the Freelance Professional</h5>
                         <p>NTI & ITIDA</p>
@@ -551,7 +639,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h5>Email</h5>
-                        <p>hendabdelnasser073@gmail.com</p>
+                        <p><a href="mailto:hendabdelnasser073@gmail.com?subject=Contact%20from%20Portfolio&body=Hi%20Hend%2C%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." class="contact-link ripple-effect">hendabdelnasser073@gmail.com <i class="fas fa-copy copy-icon" onclick="copyToClipboard(event, 'hendabdelnasser073@gmail.com')" title="Copy Email"></i></a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4" >
@@ -560,7 +648,9 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <h5>Phone</h5>
-                        <p>01025468834</p>
+                        <p>
+                            <a href="https://wa.me/201025468834" target="_blank" class="contact-link ripple-effect" title="Chat on WhatsApp">01025468834 <i class="fab fa-whatsapp"></i> <i class="fas fa-copy copy-icon" onclick="copyToClipboard(event, '01025468834')" title="Copy Phone"></i></a>
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4" >
@@ -608,3 +698,35 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- Certificate Modals -->
+<div id="modal1" class="certificate-modal">
+  <div class="certificate-modal-content">
+    <span class="close" onclick="closeCertificateModal('modal1')">&times;</span>
+    <h4>Learning Data Analytics Foundations</h4>
+    <p><strong>Issuer:</strong> LinkedIn Learning</p>
+    <p><strong>Date:</strong> March 2025</p>
+    <p><strong>Description:</strong> Completed a comprehensive course covering the foundations of data analytics, including data cleaning, visualization, and reporting.</p>
+    <a href="#" target="_blank" class="btn btn-primary">View Credential</a>
+  </div>
+</div>
+<div id="modal2" class="certificate-modal">
+  <div class="certificate-modal-content">
+    <span class="close" onclick="closeCertificateModal('modal2')">&times;</span>
+    <h4>Google Analytics Certification</h4>
+    <p><strong>Issuer:</strong> Google Skillshop</p>
+    <p><strong>Date:</strong> October 2024</p>
+    <p><strong>Description:</strong> Earned certification in Google Analytics, demonstrating proficiency in web analytics, tracking, and reporting.</p>
+    <a href="#" target="_blank" class="btn btn-primary">View Credential</a>
+  </div>
+</div>
+<div id="modal3" class="certificate-modal">
+  <div class="certificate-modal-content">
+    <span class="close" onclick="closeCertificateModal('modal3')">&times;</span>
+    <h4>Data Analysis – Skills for the Freelance Professional</h4>
+    <p><strong>Issuer:</strong> NTI & ITIDA</p>
+    <p><strong>Date:</strong> August 2024</p>
+    <p><strong>Description:</strong> Developed practical data analysis skills for freelance work, including data wrangling, visualization, and client communication.</p>
+    <a href="#" target="_blank" class="btn btn-primary">View Credential</a>
+  </div>
+</div>
